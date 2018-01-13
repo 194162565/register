@@ -1,0 +1,20 @@
+package com.wt.spread.dao.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import com.wt.spread.dao.UserDao;
+import com.wt.spread.objects.User;
+
+public class UserDaoImpl implements UserDao{
+
+	@Override
+	public User findAll() {
+		String sql = "select * form t_users";
+		Connection conn = null;
+		PreparedStatement pstat = null;
+		ResultSet re = null;
+		return null;
+	}
+
+}

@@ -1,0 +1,26 @@
+package com.sxt.copy;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class File {
+	private static void filecopytest(String file1,String file2) throws IOException{
+		FileInputStream inputStream = null;
+		FileOutputStream outputStream = null;
+		
+		inputStream = new FileInputStream(file1);
+		outputStream = new FileOutputStream(file2);
+		byte[] bt = new byte[1024];
+		int sum = 0;
+		
+		while((sum = inputStream.read(bt))> 0){
+			outputStream.write(bt, 0, sum);
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		
+	}
+}

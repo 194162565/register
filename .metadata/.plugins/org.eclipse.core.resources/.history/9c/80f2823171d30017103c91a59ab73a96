@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/quchong.css" />
+<title>查询所有学生</title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		
+		
+		$(function(){
+			alert("post");
+			$.post("findAll",function(data){
+				for(var i = 0;i<data.length;i++){
+					var content="<tr><td>"+data[i].id+"</td> <td>"+data[i].username+"</td><td>"+data[i].password+"</td></tr>";			
+					$("#tab").append(content);
+				};
+			})
+		});
+
+	</script>
+
+	</head>
+	<body>
+		<table id="tab">
+			
+		</table>
+		<a href="add.jsp">添加</a>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+package com.sxt.service.impl;
+
+import com.sxt.service.UserService;
+import com.wt.spread.dao.UserDao;
+import com.wt.spread.dao.impl.UserDaoImpl;
+import com.wt.spread.objects.User;
+
+public class UserServiceImpl implements UserService{
+
+	UserDao userdao = new UserDaoImpl();
+	
+	@Override
+	public User login(String name, String pwd) {
+		return userdao.login(name, pwd);
+	}
+
+}

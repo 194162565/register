@@ -1,0 +1,38 @@
+package com.wt.spread.dao.impl;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.wt.spread.dao.UserDao;
+import com.wt.spread.objects.User;
+import com.wt.spread.util.JdbcUtils;
+
+public class UserDaoImpl extends JdbcUtils implements UserDao {
+
+	/**
+	 * ≤È—Ø
+	 */
+	@Override
+	public List<User> findAll() {
+		List<User> list = new ArrayList<>();
+		String sql = "select * form t_users";
+		Connection conn = null;
+		PreparedStatement pstat = null;
+		ResultSet re = null;
+		
+		try {
+			conn = getConnection();
+			pstat = conn.prepareStatement(sql);
+			re = pstat.executeQuery();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+
+}

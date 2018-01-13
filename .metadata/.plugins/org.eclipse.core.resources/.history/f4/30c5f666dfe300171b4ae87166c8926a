@@ -1,0 +1,16 @@
+package com.sxt.test;
+
+import org.junit.Test;
+
+public class StringByte {
+	
+	
+	@Test
+	public void testByte(){
+		String str = "hello world";
+		byte[] bt2 = {we,wew,ere};
+		byte[] bt = str.getBytes();
+		String str2 = new String(bt);
+		System.out.println(str2);
+	}
+}

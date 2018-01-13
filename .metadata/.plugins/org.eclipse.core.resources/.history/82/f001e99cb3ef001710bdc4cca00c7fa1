@@ -1,0 +1,18 @@
+package com.sxt.copy;
+
+import java.io.File;
+
+public class Test {
+	public static void main(String[] args) throws Exception {
+		String filepath = "D:/IO/test/test.txt";
+		File file = new File(filepath);
+		if(!file.exists()){
+			file.createNewFile();
+		}
+	
+	//	System.out.println(file.delete());
+	
+
+
+	}
+}

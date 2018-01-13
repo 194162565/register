@@ -1,0 +1,90 @@
+/**
+ * Copyright (c) 北京捷成世纪科技股份有限公司. All Rights Reserved.
+ * 
+ * File name : User.java
+ * Create time : 2018年1月2日
+ * Create user : Jetsen-WT
+ */
+package com.wt.spread.objects;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 
+ * 描述:TODO
+ * @ClassName User
+ * @author Jetsen-WT
+ * @date 2018年1月2日上午11:36:20
+ * 
+ */
+public class User {
+    private String id;
+    private String name;
+    private String pwd;
+    
+    private String content;
+    private String spreadCode;
+    
+    
+    List<User> users = new ArrayList<User>(10);
+    
+ 
+	public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getPwd() {
+        return pwd;
+    }
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
+    public String getContent() {
+        return content;
+    }
+    public void setContent(String content) {
+        this.content = content;
+    }
+    public String getSpreadCode() {
+        return spreadCode;
+    }
+    public void setSpreadCode(String spreadCode) {
+        this.spreadCode = spreadCode;
+    }
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        this.id = id;
+    }
+    public List<User> getUsers() {
+        return users;
+    }
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
+	public User() {
+		super();
+	}
+	public User(String id, String name, String pwd, String content, String spreadCode, List<User> users) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.pwd = pwd;
+		this.content = content;
+		this.spreadCode = spreadCode;
+		this.users = users;
+	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", pwd=" + pwd + ", content=" + content + ", spreadCode="
+				+ spreadCode + ", users=" + users + "]";
+	}
+  
+    
+    
+    
+}

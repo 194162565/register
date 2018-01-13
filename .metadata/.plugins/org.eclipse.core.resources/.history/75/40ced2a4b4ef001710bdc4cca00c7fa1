@@ -1,0 +1,13 @@
+package com.sxt.copy;
+
+import java.io.File;
+
+public class Test {
+	public static void main(String[] args) throws Exception {
+		String filepath = "E:/IOs";
+		File file = new File(filepath);
+		file.mkdirs();
+		System.out.println();
+		
+	}
+}

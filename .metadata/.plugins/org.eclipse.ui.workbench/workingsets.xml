@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1511266940835_0" label="ssm-login" name="ssm-login">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ssm-controller" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ssm-mapper" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ssm-service" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ssm-login" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ssm-pojo" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1511269965035_1" label="Window Working Set" name="Aggregate for window 1511269965035"/>
+</workingSetManager>

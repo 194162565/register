@@ -1,0 +1,7 @@
+package com.wt.spread.dao;
+
+import com.wt.spread.objects.User;
+
+public interface UserDao {
+
+}

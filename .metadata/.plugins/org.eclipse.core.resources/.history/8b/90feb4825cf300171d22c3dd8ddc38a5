@@ -1,0 +1,16 @@
+package com.wt.spread.db;
+
+import java.util.UUID;
+
+public class DateTest {
+
+	public static void main(String[] args) {
+		createuuid();
+	}
+	
+	public static String createuuid(){
+		String newuuid = UUID.randomUUID().toString().replace("-", "");
+		System.out.println();
+		return "newuuid";
+	}
+}

@@ -1,0 +1,26 @@
+package com.sxt.service.impl;
+
+import java.util.List;
+
+import com.sxt.service.UserService;
+import com.wt.spread.dao.UserDao;
+import com.wt.spread.dao.impl.UserDaoImpl;
+import com.wt.spread.objects.User;
+
+public class UserServiceImpl implements UserService{
+
+	UserDao userdao = new UserDaoImpl();
+	
+	//µÇÂ¼
+	@Override
+	public User login(String name, String pwd) {
+		return userdao.login(name, pwd);
+	}
+
+	@Override
+	public List<User> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

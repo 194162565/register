@@ -1,0 +1,84 @@
+package com.wt.spread.dao.impl;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.wt.spread.dao.UserDao;
+import com.wt.spread.objects.User;
+import com.wt.spread.util.JdbcUtils;
+
+public class UserDaoImpl extends JdbcUtils implements UserDao {
+
+	/**
+	 * 查询
+	 */
+	@Override
+	public List<User> findAll() {
+		List<User> list = new ArrayList<>();
+		String sql = "select * form t_users";
+		Connection conn = null;
+		PreparedStatement pstat = null;
+		ResultSet rs = null;
+		
+		try {
+			conn = getConnection();
+			pstat = conn.prepareStatement(sql);
+			rs = pstat.executeQuery();
+			
+			while(rs.next()){
+				String name = rs.getString("name");
+				String pwd = rs.getString("pwd");
+				
+				User user = new User();
+				list.add(user);
+				System.out.println(user);
+			}
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			colseAll(conn, pstat, rs);
+		}
+		return list;
+	}
+
+	/**
+	 * 登录
+	 */
+	@Override
+	public User login(String name, String pwd) {
+		User user = null;
+		//声明连接
+		Connection conn = null;
+		PreparedStatement pstat = null;
+		ResultSet re = null;
+		try {
+			//创建连接
+			conn = getConnection();
+			String sql = "select * form t_users where name=? and pwd = ?";
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, name);
+			pstat.setString(2, pwd);
+			//发送结果集
+			re = pstat.executeQuery();
+			//处理结果
+			if(re.next()){
+				String names = re.getString("name");
+				String pwds = re.getString("pwd");
+				
+				User user = new User(names,pwds);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return user;
+	}
+
+}

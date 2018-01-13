@@ -1,0 +1,15 @@
+package com.sxt.dao.impl;
+
+import com.sxt.dao.UserDao;
+import com.sxt.pojo.User;
+import com.sxt.utils.JdbcUtils;
+
+public class UserDaoImpl extends JdbcUtils implements UserDao{
+
+	@Override
+	public User login(String name, String pwd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

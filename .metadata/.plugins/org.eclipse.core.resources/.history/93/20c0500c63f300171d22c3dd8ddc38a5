@@ -1,0 +1,32 @@
+package com.wt.spread.util;
+
+import java.io.IOException;
+import java.util.Properties;
+
+public class JdbcUtils {
+    private static String dbtype = "";//数据库类型
+	private static String Driver = "";
+	private static String Url = "";
+	private static String UserName = "";
+	private static String PassWord = "";
+	
+	
+	static{
+		//创建Properties对象
+		Properties prop = new Properties();
+		try {
+			//读取配置文件
+			prop.load(JdbcUtils.class.getClassLoader().getResourceAsStream("db-config.properties"));
+			//获取数据库类型
+			pro.load(JdbcUtil.class.getClassLoader().getResourceAsStream("db.properties"));
+			dbType = pro.getProperty("dbType");
+			Driver = pro.getProperty(dbType+"Driver");
+			Url = pro.getProperty(dbType+"Url");
+			User = pro.getProperty(dbType+"User");
+			PassWord = pro.getProperty(dbType+"PassWord");
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

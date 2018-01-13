@@ -1,0 +1,12 @@
+package com.sxt.service;
+
+import com.wt.spread.objects.User;
+
+public interface UserService {
+
+	/**
+	 * µÇÂ¼
+	 */
+	public User login(String name,String pwd);
+	
+}

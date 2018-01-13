@@ -1,0 +1,16 @@
+package com.sxt.copy;
+
+import java.io.File;
+
+public class Test {
+	public static void main(String[] args){
+		String directoryName = "D:/filen/tese";
+		File file = new File(directoryName);
+		System.out.println("目录是 : " + file.mkdirs());
+		
+		String fileName = "D:/filen/tese/test.java";
+		System.out.println("文件是 : " + file.createNewFile());
+		
+		
+	}
+}

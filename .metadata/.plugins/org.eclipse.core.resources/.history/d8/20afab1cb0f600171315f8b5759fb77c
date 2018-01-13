@@ -1,0 +1,8 @@
+package com.sxt.dao;
+
+import com.wt.spread.objects.User;
+
+public interface UserDao {
+	
+	public User login(String name,String pwd);
+}

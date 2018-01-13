@@ -1,0 +1,16 @@
+package com.wt.spread.dao.impl;
+
+import com.mysql.jdbc.Connection;
+import com.wt.spread.dao.UserDao;
+import com.wt.spread.objects.User;
+
+public class UserDaoImpl implements UserDao{
+
+	@Override
+	public User findAll() {
+		String sql = "select * form t_users";
+		Connection conn = null;
+		return null;
+	}
+
+}

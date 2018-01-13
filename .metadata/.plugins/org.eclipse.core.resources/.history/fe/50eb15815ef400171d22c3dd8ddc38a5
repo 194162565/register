@@ -1,0 +1,120 @@
+package com.wt.spread.servlet;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.sxt.service.UserService;
+import com.sxt.service.impl.UserServiceImpl;
+import com.wt.spread.objects.User;
+import com.wt.spread.util.EnCode;
+
+/**
+ * Servlet implementation class Login
+ */
+@WebServlet("/Login")
+public class Login extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Login() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+    
+    
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String username = request.getParameter("user");
+		String password = request.getParameter("pwd");
+		
+		UserService userService = new UserServiceImpl();
+		userService.login(username, password);
+		if ("username".equals(username) && "password".equals(password)) {
+		    RequestDispatcher dis = request.getRequestDispatcher("/main.jsp");//请求转发到main.jsp
+            dis.forward(request, response);
+            return;
+        }else{
+        	System.out.println("报错")
+        }
+		
+		/*ServletContext application = this.getServletContext();
+		
+		List<User> userList = (List)application.getAttribute("userlist");
+		if (userList == null) {
+            userList = new ArrayList<User>();
+            application.setAttribute("userlist", userList);
+        }
+		
+		boolean isExist = false;
+		User tempUser = null;
+		for (User user : userList) {
+            if (user.getName().equals(username)) {
+                if (user.getPwd().equals(password)) {
+                    tempUser = user;
+                }
+                else{
+                    request.setAttribute("error", "密码不正确"); 
+                }
+                
+                isExist = true;
+                break;
+            }
+        }
+		
+
+		if (tempUser != null) {
+		    StringBuffer requestURL = request.getRequestURL();
+		    String url = requestURL.toString();
+		    String projectName = request.getContextPath();
+		    
+		    int index = url.indexOf(projectName);
+		    String urlroot = url.substring(0, index+projectName.length());
+		    
+		    String content = urlroot + "/register.jsp?username=" + tempUser.getId();
+            
+		    
+		    try {
+		        String imagePath = request.getServletContext().getRealPath("image")+"/";
+		        System.out.println(imagePath);
+                EnCode.createCode(imagePath, tempUser.getId(), content);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+		    
+		    request.setAttribute("imageurl", "image/" + tempUser.getId()+".png");
+		    RequestDispatcher dis = request.getRequestDispatcher("/code.jsp");
+            dis.forward(request, response);
+        }
+		else{
+		    if (!isExist) {
+		        request.setAttribute("error", "用户不正确"); 
+            }
+		    RequestDispatcher dis = request.getRequestDispatcher("/login.jsp");
+            dis.forward(request, response);
+		}
+		
+	}*/
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

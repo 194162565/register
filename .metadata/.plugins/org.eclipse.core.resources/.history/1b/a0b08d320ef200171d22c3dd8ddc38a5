@@ -1,0 +1,14 @@
+package com.sxt.copy;
+
+import java.io.File;
+
+public class Test {
+	public static void main(String[] args){
+		String directoryName = "D:/filen/tese";
+		File file = new File(fileName);
+		System.out.println("Ä¿Â¼ÊÇ : " + file.mkdirs());
+		String 
+		
+		
+	}
+}

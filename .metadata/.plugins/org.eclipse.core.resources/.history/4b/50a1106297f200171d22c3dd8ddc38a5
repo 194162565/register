@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+encoding//WebContent/login.jsp=UTF-8
+encoding//src/com/wt/spread/db/DBPool.java=UTF-8
+encoding//src/com/wt/spread/objects/User.java=UTF-8

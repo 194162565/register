@@ -1,0 +1,8 @@
+package com.sxt.dao;
+
+import com.sxt.pojo.User;
+
+public interface UserDao {
+	
+	public User login(String name,String pwd);
+}

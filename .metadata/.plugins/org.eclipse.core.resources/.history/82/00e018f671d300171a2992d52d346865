@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.sxt</groupId>
+    <artifactId>ssm-login</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>ssm-controller</artifactId>
+  <packaging>war</packaging>
+  <!-- controller层要依赖与service -->
+  <dependencies>
+  	<dependency>
+  		<groupId>com.sxt</groupId>
+    	<artifactId>ssm-service</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	
+  		<!-- aop 织入jar包 -->
+  	    <dependency>
+			<groupId>com.github.sebhoss.contract</groupId>
+			<artifactId>contract-aspect</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+  		<!-- Jackson Json处理工具包 -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.7</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.12</version>
+		    <scope>test</scope>
+		</dependency>
+		
+  </dependencies>
+  <!-- tomcat插件 -->
+  <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<path>/abc</path>
+					<port>8080</port>
+					<uriEncoding>UTF-8</uriEncoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

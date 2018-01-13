@@ -1,0 +1,14 @@
+package com.sxt.service;
+
+import java.util.List;
+
+import com.sxt.pojo.User;
+
+public interface UserService {
+
+	public User login(String name,String pwd);
+	
+	
+	//у╧ож
+	public List<User> findAll();
+}

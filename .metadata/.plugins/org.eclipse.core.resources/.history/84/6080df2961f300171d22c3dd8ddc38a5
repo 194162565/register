@@ -1,0 +1,14 @@
+package com.wt.spread.util;
+
+public class JdbcUtils {
+	private static String dbtype = "";
+	private static String driver = "";
+	private static String url = "";
+	private static String username = "";
+	private static String password = "";
+	
+	
+	static{
+		Properties prop = new Properties();
+	}
+}

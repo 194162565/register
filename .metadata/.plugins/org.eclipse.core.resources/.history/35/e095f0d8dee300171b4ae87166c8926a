@@ -1,0 +1,6 @@
+package com.sxt.test;
+
+public class StringByte {
+	String str = "hello world";
+	byte bt = str.getBytes();
+}

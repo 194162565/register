@@ -1,0 +1,5 @@
+package com.sxt.dao.impl;
+
+public class UserDaoImpl {
+
+}

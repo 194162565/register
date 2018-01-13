@@ -1,0 +1,11 @@
+package com.sxt.copy;
+
+import java.io.File;
+
+public class Test {
+	public static void main(String[] args){
+		String fileName = "D:/filen";
+		File file = new File(fileName);
+		
+	}
+}

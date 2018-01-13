@@ -1,0 +1,15 @@
+package com.sxt.copy;
+
+import java.io.File;
+
+public class Test {
+	public static void main(String[] args) throws Exception {
+		String filepath = "E:/IOs"; //目录名
+		File file = new File(filepath);
+		System.out.println(file.mkdirs());//创建目录 
+		
+		String filename = "E:/IOs/java.txt"; //文件名
+		File files = new File(filename);
+		System.out.println(files.createNewFile());
+	}
+}

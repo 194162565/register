@@ -1,0 +1,17 @@
+package com.wt.spread.db;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class DateTest {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	public static Date newdate(){
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+		
+		return null;
+	}
+}

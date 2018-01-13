@@ -1,0 +1,5 @@
+package com.wt.spread.dao.impl;
+
+public class UserDaoImpl {
+
+}

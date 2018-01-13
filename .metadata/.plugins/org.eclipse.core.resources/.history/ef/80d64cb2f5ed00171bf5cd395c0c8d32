@@ -1,0 +1,12 @@
+package com.sxt.copy;
+
+import java.io.FileInputStream;
+
+public class File {
+	public void filecopytest(File file1,File file2){
+		FileInputStream inputStream = new FileInputStream(file1);
+		
+		
+		
+	}
+}

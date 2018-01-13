@@ -1,0 +1,57 @@
+package com.sxt.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sxt.mapper.UserMapper;
+import com.sxt.pojo.User;
+import com.sxt.service.UserSerivce;
+
+@Service
+public class UserServiceImpl implements UserSerivce{
+
+	//需要userMapper
+	@Autowired
+	private UserMapper userMapper;
+	/**
+	 * 登录
+	 */
+	@Override
+	public User login(String username, String password) {
+		return userMapper.login(username, password);
+	}
+	
+	
+	/**
+	 * 展现
+	 */
+	@Override
+	public List<User> findAll() {
+		return userMapper.findAll();
+	}
+
+
+	/**
+	 * 添加
+	 */
+	@Override
+	public int insertUser(User user) {
+		// TODO Auto-generated method stub
+		return userMapper.insertUser(user);
+	}
+
+	/**
+	 * 删除
+	 */
+	@Override
+	public int deleteUser(int id) {
+		// TODO Auto-generated method stub
+		return userMapper.deleteUser(id);
+	}
+	
+	
+	
+
+}

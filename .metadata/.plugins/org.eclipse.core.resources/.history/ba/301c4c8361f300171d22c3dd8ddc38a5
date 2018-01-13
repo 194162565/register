@@ -1,0 +1,18 @@
+package com.wt.spread.util;
+
+import java.util.Properties;
+
+public class JdbcUtils {
+	private static String dbtype = "";//数据库类型
+	private static String driver = "";
+	private static String url = "";
+	private static String username = "";
+	private static String password = "";
+	
+	
+	static{
+		//创建Properties对象
+		Properties prop = new Properties();
+		//读取配置文件
+	}
+}

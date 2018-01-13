@@ -1,0 +1,7 @@
+package com.sxt.copy;
+
+public class File {
+	public void filecopytest(File file1,File file2){
+		
+	}
+}

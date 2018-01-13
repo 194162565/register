@@ -1,0 +1,13 @@
+package com.sxt.copy;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class File {
+	public void filecopytest(String file1,File file2) throws FileNotFoundException{
+		FileInputStream inputStream = new FileInputStream(file1);
+		
+		
+		
+	}
+}

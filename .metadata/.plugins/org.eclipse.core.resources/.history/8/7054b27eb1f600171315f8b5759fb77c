@@ -1,0 +1,18 @@
+package com.sxt.service.impl;
+
+import com.sxt.dao.UserDao;
+import com.sxt.dao.impl.UserDaoImpl;
+import com.sxt.pojo.User;
+import com.sxt.service.UserService;
+
+public class UserServiceImpl implements UserService {
+
+	UserDao userDao = new UserDaoImpl();
+	
+	@Override
+	public User login(String name, String pwd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

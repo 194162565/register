@@ -1,0 +1,6 @@
+package com.wt.spread.dao;
+
+public class UserDao {
+
+	public User findAll();
+}

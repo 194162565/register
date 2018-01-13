@@ -1,0 +1,12 @@
+package com.sxt.copy;
+
+import java.util.Scanner;
+
+public class Test {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("请输入用户名");
+		String next = sc.hasNext();
+		System.out.println("输入的是 : " + next);
+	}
+}

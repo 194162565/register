@@ -1,0 +1,10 @@
+package com.wt.spread.dao;
+
+import java.util.List;
+
+import com.wt.spread.objects.User;
+
+public interface UserDao {
+
+	public List<User> findAll();
+}

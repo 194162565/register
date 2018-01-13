@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>this is add</h2>
+	<center>
+		<from action="add" method="post">
+			请输入用户名:<input type="text" name="name" value=""/>
+			请输入密码:<input type="text" name="name" value=""/>
+					  <input type="submit" value="注册"/>
+		</from>
+	</center>
+</body>
+</html>

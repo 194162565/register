@@ -1,0 +1,9 @@
+package com.sxt.copy;
+
+public class Test {
+	public static void main(String[] args) throws Exception {
+		String file = "D:/file";
+		File files = new File("D:/file");
+		
+	}
+}

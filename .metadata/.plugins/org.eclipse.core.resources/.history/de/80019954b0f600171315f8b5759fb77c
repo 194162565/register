@@ -1,0 +1,8 @@
+package com.sxt.dao.impl;
+
+import com.sxt.dao.UserDao;
+import com.sxt.utils.JdbcUtils;
+
+public class UserDaoImpl extends JdbcUtils implements UserDao{
+
+}

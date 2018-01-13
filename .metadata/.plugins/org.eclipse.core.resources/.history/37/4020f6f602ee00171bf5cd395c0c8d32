@@ -1,0 +1,18 @@
+package com.sxt.copy;
+
+import java.util.Scanner;
+
+public class Test {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("请输入用户名");
+		String name = sc.next();
+		System.out.println("请输入年龄");
+		int age = sc.nextInt();
+		System.out.println("请输入性别");
+		String sex = sc.next();
+		System.out.println("哈哈哈");
+		sc.in
+		System.out.println("输入的是 : " + next);
+	}
+}

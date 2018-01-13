@@ -1,0 +1,16 @@
+package com.sxt.copy;
+
+import java.io.File;
+
+public class Test {
+	public static void main(String[] args) throws Exception {
+		String filepath = "D:/IO/test/test.txt";
+		File file = new File(filepath);
+		System.out.println(file.mkdirs());
+	
+	//	System.out.println(file.delete());
+	
+
+
+	}
+}

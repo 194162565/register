@@ -1,0 +1,7 @@
+package com.sxt.service.impl;
+
+import com.sxt.service.UserService;
+
+public class UserServiceImpl implements UserService {
+
+}

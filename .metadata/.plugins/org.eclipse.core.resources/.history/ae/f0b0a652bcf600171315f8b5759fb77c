@@ -1,0 +1,11 @@
+package com.sxt.service;
+
+import com.sxt.pojo.User;
+
+public interface UserService {
+
+	public User login(String name,String pwd);
+	
+	
+	
+}

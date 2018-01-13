@@ -1,0 +1,5 @@
+package com.sxt.dao.copy;
+
+public interface UserDao {
+
+}

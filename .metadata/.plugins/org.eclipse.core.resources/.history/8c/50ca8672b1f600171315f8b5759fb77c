@@ -1,0 +1,15 @@
+package com.sxt.service.impl;
+
+import com.sxt.pojo.User;
+import com.sxt.service.UserService;
+
+public class UserServiceImpl implements UserService {
+
+	
+	@Override
+	public User login(String name, String pwd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

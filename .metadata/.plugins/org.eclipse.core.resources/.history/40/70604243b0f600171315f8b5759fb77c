@@ -1,0 +1,5 @@
+package com.sxt.dao.impl.copy;
+
+public class UserDaoImpl {
+
+}
